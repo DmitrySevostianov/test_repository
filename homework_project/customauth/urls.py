@@ -13,6 +13,6 @@ urlpatterns = [
 
     re_path(r'^signup/$', custom_auth_views.signup, name='signup'),
     re_path(r'^login/$', auth_views.login, name='login'),     # {'redirect_field_name' : 'home'}
-    re_path(r'^logout/$', auth_views.logout, {'next_page': 'learning:index'} , name='logout'),
+    re_path(r'^logout/$', auth_views.logout, {'next_page': 'learning:courses_list'} , name='logout'),
 
 ]

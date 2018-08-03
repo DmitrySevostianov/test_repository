@@ -1,4 +1,4 @@
-from django.urls import  re_path, include
+from django.urls import re_path
 
 from django.contrib.auth.models import User
 
@@ -12,7 +12,7 @@ app_name = 'custom_auth'
 urlpatterns = [
 
     re_path(r'^signup/$', custom_auth_views.signup, name='signup'),
-    re_path(r'^login/$', auth_views.login, name='login'),     # {'redirect_field_name' : 'home'}
-    re_path(r'^logout/$', auth_views.logout, {'next_page': 'learning:courses_list'} , name='logout'),
+    #re_path(r'^login/$', auth_views.login, name='login'), 
+    #re_path(r'^logout/$', auth_views.logout, {'next_page': 'learning:courses_list'} , name='logout'),
 
 ]

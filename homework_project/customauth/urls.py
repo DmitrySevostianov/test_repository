@@ -5,6 +5,12 @@ from django.contrib.auth.models import User
 ### see => https://simpleisbetterthancomplex.com/tutorial/2016/06/27/how-to-use-djangos-built-in-login-system.html
 from django.contrib.auth import views as auth_views
 
+
+###
+### try to uninstall django2.1 and install 2.0.7 tu use auth_views
+###
+
+
 from . import views as custom_auth_views
 
 app_name = 'custom_auth'

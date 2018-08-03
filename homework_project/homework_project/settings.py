@@ -67,6 +67,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     
     'learning.apps.LearningConfig',
+    'customauth.apps.CustomauthConfig',
 ]
 
 MIDDLEWARE = [

@@ -4,8 +4,11 @@ from django.contrib import admin
 from django.urls import path, re_path, include
 
 urlpatterns = [
+
     path('learning/', include('learning.urls')),
+    path('auth/', include('customauth.urls')),
     path('admin/', admin.site.urls),
+
 ]
 
 

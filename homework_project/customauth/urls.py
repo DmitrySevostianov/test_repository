@@ -7,7 +7,8 @@ from django.contrib.auth import views as auth_views
 
 
 ###
-### uninstalled django 2.1 and than installed 2.0.7, so auth_views works!
+### uninstalled django 2.1 
+### and than installed 2.0.7, so auth_views works!
 ###
 
 

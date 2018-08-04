@@ -55,6 +55,18 @@
               <a class="dropdown-item" href="#">Another action</a>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
+
+            {% if user.is_authenticated %}
+                 <li class="nav-item"> <a class="nav-link disabled" href="#"> User: {{ user.get_username }} </a></li>
+
+                 <li class="nav-item"><a class="nav-link" href="{% url 'custom_auth:logout'%}?next={% url 'learning:courses_list' %}">Logout</a></li>  
+
+
+               {% else %}
+                 <li class="nav-item"><a class="nav-link" href="{% url 'custom_auth:login'%}?next={% url 'learning:courses_list' %}">Login</a></li> 
+                 <li class="nav-item"><a class="nav-link" href="{% url 'custom_auth:signup'%}?next={% url 'learning:courses_list' %}">Register</a></li>   
+               {% endif %} 
+
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">

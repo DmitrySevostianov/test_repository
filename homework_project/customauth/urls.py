@@ -7,7 +7,7 @@ from django.contrib.auth import views as auth_views
 
 
 ###
-### try to uninstall django2.1 and install 2.0.7 tu use auth_views
+### uninstalled django 2.1 and than installed 2.0.7, so auth_views works!
 ###
 
 
@@ -18,7 +18,7 @@ app_name = 'custom_auth'
 urlpatterns = [
 
     re_path(r'^signup/$', custom_auth_views.signup, name='signup'),
-    #re_path(r'^login/$', auth_views.login, name='login'), 
-    #re_path(r'^logout/$', auth_views.logout, {'next_page': 'learning:courses_list'} , name='logout'),
+    re_path(r'^login/$', auth_views.login, name='login'), 
+    re_path(r'^logout/$', auth_views.logout, {'next_page': 'learning:courses_list'} , name='logout'),
 
 ]
